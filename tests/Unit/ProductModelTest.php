@@ -5,20 +5,16 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Models\Product;
 
 class ProductModelTest extends TestCase
 {
-    public function testDatabase()
+    //use RefreshDatabase;
+
+    public function testProduct()
     {
         // Make call to application...
-        $this->assertDatabaseHas('users', [
-            'email' => 'kevinobamatheus@gmail.com'
-        ]);
-
-        $this->assertDatabaseMissing('users', [
-            'email' => 'barackobama@gmail.com'
-        ]);
-
+        //$product = factory(Product::class)->make();
 
         $this->assertDatabaseHas('products', [
             'title' => 'iphone'

@@ -9,12 +9,19 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 class UserTest extends TestCase
 {
     /**
-     * A basic test example.
+     * testDatabase
      *
      * @return void
      */
-    public function testExample()
+    public function testDatabase()
     {
-        $this->assertTrue(true);
+        // Make call to application...
+        $this->assertDatabaseHas('users', [
+            'email' => 'kevinobamatheus@gmail.com'
+        ]);
+
+        $this->assertDatabaseMissing('users', [
+            'email' => 'barackobama@gmail.com'
+        ]);
     }
 }

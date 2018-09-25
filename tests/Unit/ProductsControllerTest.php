@@ -15,7 +15,8 @@ class ProductsControllerTest extends TestCase
      */
     public function testIndex()
     {
-        //$this->client->request('GET', 'products');
+        //$this->call('GET', 'products');
+
         $this->assertTrue(true);
     }
 }

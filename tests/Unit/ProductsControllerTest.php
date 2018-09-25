@@ -3,17 +3,19 @@
 namespace Tests\Unit;
 
 use Tests\TestCase;
+use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class ProductTest extends TestCase
+class ProductsControllerTest extends TestCase
 {
     /**
-     * A basic test example.
+     * test Index
      *
      * @return void
      */
-    public function testBasicTest()
+    public function testIndex()
     {
+        //$this->client->request('GET', 'products');
         $this->assertTrue(true);
     }
 }
